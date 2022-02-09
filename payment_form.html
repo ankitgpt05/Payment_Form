@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Payment Form</title>
+     <link rel="stylesheet" href="styleform.css">
+ </head>
+ <body >
+     <div class="container">
+     <form action="" >
+         <h1 class="main_heading">Payment Form</h1>
+         <hr>
+         <p>Required Fields are Followed by *</p>
+         <h2>Contact Information</h2>
+         <P>Name: * <input type="text" name="name" required placeholder="om pandey"> </P><!--always use name attribute in input tag as it helps to send the text to the server-->
+          <fieldset><!--used to group the male and female controls-->
+              <legend>Gender *</legend><!--used to give the name of this group-->
+          <p>
+             Male  <input type="radio" name="gender" id="male" required><!--note name attribute value will always be unique & id is used so that we can select only one option -->
+             Female  <input type="radio" name="gender" id="female" required><!--note name attribute value will always be unique & id is used so that we can select only one option -->
+          </p>
+        </fieldset>
+        <p>Address: <textarea name="address" id="address" cols="100" rows="8" placeholder="Enter your address"></textarea></p>
+        <P>Email: *<input type="email" name="email" id="email" required placeholder="example@gmail.com"></P><!--used input:email to get this whole in vs code ; there are amny input types always search in google to use other input types-->
+         <P>Pincode: *<input type="number" name="pincode" id="pincode" required></P><!--everywhere we took id as unique-->
+         <hr>
+         <h2>Payment details</h2>
+         <p>
+             Card type: *
+             <select name="card_type" id="card_type" required>
+                 <option value="">--select a card type--</option><!--this is an option whose value is empty as we want only to say user to select a card-->
+                 <option value="Visa">Visa</option><!--value="Visa" this will go to server and >Visa</option this will get display at webpage-->
+                 <option value="Matercard">Mastercard</option>
+                 <option value="Rupay">Rupay</option>
+             </select>
+         </p>
+         <P>Card number:*<input type="number" name="card_number" id="card_number" required placeholder="1111-2222-3333-4444"></P>
+         <P>
+             Expiration date: *<input type="date" name="expiration_date" id="expiration_date" required><!--input:date gives a feature to select a date & name="expiration_date"  server mein phele naam jayega then uska value jo user dega-->
+         </P>
+         <p>CVV:*<input type="password" name="cvv" id="cvv" required></p>
+         <input type="submit" value="Pay Now">
+     </form>
+    </div>
+ </body>
+ </html>
